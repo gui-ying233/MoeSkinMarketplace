@@ -1,3 +1,118 @@
+@import url("//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css");
+@import url("//unpkg.com/nord-highlightjs@0.1.0/dist/nord.css");
+
+body {
+	margin: 0;
+	background-color: var(--theme-background-color);
+	color: var(--theme-text-color);
+	line-height: 2;
+}
+
+header {
+	background-color: var(--theme-header-background-color);
+	box-shadow: 0 1px 0 0 var(--theme-header-box-shadow-color);
+}
+header > nav {
+	display: flex;
+	align-items: center;
+}
+header > nav > a {
+	padding: 1em;
+	margin: 0;
+	background-color: var(--theme-card-background-color);
+	color: var(--theme-text-color);
+	-webkit-user-select: none;
+	user-select: none;
+	transition: all 250ms;
+}
+header > nav > a:hover {
+	background-color: var(--theme-accent-color);
+	color: var(--theme-accent-link-color);
+}
+
+a {
+	color: var(--theme-link-color);
+	text-decoration: none;
+	padding-inline: 0.125em;
+	margin-inline: 0.125em;
+}
+a:empty::after {
+	content: attr(href);
+}
+
+h1 {
+	text-align: center;
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	color: var(--theme-text-color);
+}
+
+pre {
+	position: relative;
+}
+pre,
+pre > code {
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	tab-size: 2em;
+	border-radius: 0.5em;
+	text-shadow: none;
+}
+pre::before {
+	content: attr(lang);
+	position: absolute;
+	right: 0.25em;
+	top: 0.25em;
+}
+pre > code {
+	max-height: 15.25em;
+	transition: max-height 1500ms;
+	padding-top: 1.5em !important;
+}
+pre:hover > code,
+pre > code:hover {
+	max-height: 1000em;
+}
+pre > code > span {
+	display: inline-block;
+}
+
+article {
+	margin: 0 auto;
+	padding: 0 2.5em;
+	max-width: 45em;
+	min-height: calc(100vh - 17.75em);
+}
+
+p {
+	text-indent: 2em;
+}
+
+footer {
+	min-height: 5em;
+	padding: 1em;
+	text-align: center;
+}
+
+::selection {
+	background-color: var(--theme-text-color);
+	color: var(--theme-background-color);
+}
+
+@media print {
+	.noprint,
+	.noprint *,
+	header,
+	header * {
+		display: none !important;
+	}
+}
+
 :root {
 	--theme-accent-color: rgb(142, 212, 149);
 	--theme-accent-color--rgb: 142, 212, 149;

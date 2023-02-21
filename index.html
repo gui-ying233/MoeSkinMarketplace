@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MoeSkin Marketplace</title>
+		<link rel="stylesheet" href="src/base.css" />
+		<script src="src/base.js"></script>
+		<script></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="index.html">首页</a><a href="css.html">CSS</a
+				><a href="css.html">JS</a>
+			</nav>
+		</header>
+		<main>
+			<h1>MoeSkin Marketplace</h1>
+			<article>
+				<p>社区创作者所制作的用于萌娘百科 MoeSkin 皮肤的 CSS、JS。</p>
+				<h2>通用嵌入方法</h2>
+				<h3>CSS</h3>
+				<ul>
+					<li>
+						（推荐）如果你的<a
+							href="//moegirl.org.cn/Special:MyPage/common.css"
+							>common.css</a
+						>内不存在任何生效的内容（单纯的空白页面或注释不影响），可选择在<a
+							href="//moegirl.org.cn/Special:MyPage/moeskin.css"
+							>moeskin.css</a
+						>（的前面）插入引用代码；
+					</li>
+					<li>
+						（否则）在<a
+							href="//moegirl.org.cn/Special:MyPage/common.css"
+							>common.css</a
+						>（的前面）插入引用代码。
+					</li>
+				</ul>
+				<h3>JS</h3>
+				<ul>
+					<li>
+						（推荐）如果你的<a
+							href="//moegirl.org.cn/Special:MyPage/common.js"
+							>common.js</a
+						>内不存在任何生效的内容（单纯的空白页面或注释不影响），可选择在<a
+							href="//moegirl.org.cn/Special:MyPage/moeskin.js"
+							>moeskin.js</a
+						>（的前面）插入引用代码；
+					</li>
+					<li>
+						（否则）在<a
+							href="//moegirl.org.cn/Special:MyPage/common.js"
+							>common.js</a
+						>（的前面）用以下代码包裹引用代码。
+						<pre lang="js">
+if (mw.config.get().skin === 'moeskin') {
+	// 引用代码	
+}</pre
+						>
+					</li>
+				</ul>
+				<p>
+					当然你也可以选择手动复制代码到上述页面来手动控制具体内容。
+				</p>
+			</article>
+		</main>
+		<footer></footer>
+	</body>
+</html>
