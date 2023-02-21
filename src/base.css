@@ -6,6 +6,7 @@ body {
 	background-color: var(--theme-background-color);
 	color: var(--theme-text-color);
 	line-height: 2;
+	font-family: sans-serif;
 }
 
 header {
@@ -42,6 +43,14 @@ a:empty::after {
 
 h1 {
 	text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: serif;
 }
 h1 > a,
 h2 > a,
