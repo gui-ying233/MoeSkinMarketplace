@@ -65,8 +65,9 @@ pre > code {
 }
 pre::before {
 	content: attr(lang);
+	color: #d8dee9;
 	position: absolute;
-	right: 0.25em;
+	right: 0.5em;
 	top: 0.25em;
 }
 pre > code {
