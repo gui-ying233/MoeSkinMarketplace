@@ -53,6 +53,9 @@ h5,
 h6 {
 	font-family: serif;
 }
+h1 > a {
+	border-bottom: 1px solid;
+}
 h1 > a,
 h2 > a,
 h3 > a,
