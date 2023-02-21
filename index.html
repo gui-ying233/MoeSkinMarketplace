@@ -7,7 +7,13 @@
 		<title>MoeSkin Marketplace</title>
 		<link rel="stylesheet" href="src/base.css" />
 		<script src="src/base.js"></script>
-		<script></script>
+		<script>
+			if (
+				document.location.pathname === "/MoeSkinMarketplace/index.html"
+			) {
+				document.location = ".";
+			}
+		</script>
 	</head>
 	<body>
 		<header>
