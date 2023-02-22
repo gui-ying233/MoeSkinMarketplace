@@ -16,11 +16,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 	const header = document.createElement("header");
-	header.innerHTML = '<nav><a href="index.html">首页</a><a href="css.html">CSS</a><a href="css.html">JS</a></nav>';
+	header.innerHTML = '<nav><a href="index.html">首页</a><a href="css.html">CSS</a><a href="css.html">JS</a><div id="themeSelector">主题：</div></nav>';
 	document.body.prepend(header);
-
-	const footer = document.createElement("footer");
-	footer.innerHTML = '<p>© 2021 MoeSkinMarketplace</p>';
 
 	const headingsCounter = new Object();
 	const headings = document.body.querySelectorAll("h1, h2, h3, h4, h5, h6");

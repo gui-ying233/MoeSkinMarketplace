@@ -17,7 +17,7 @@ header > nav {
 	display: flex;
 	align-items: center;
 }
-header > nav > a {
+header > nav > * {
 	padding: 1em;
 	margin: 0;
 	background-color: var(--theme-card-background-color);
@@ -27,9 +27,16 @@ header > nav > a {
 	user-select: none;
 	transition: all 250ms;
 }
-header > nav > a:hover {
+header > nav > *:hover {
 	background-color: var(--theme-accent-color);
 	color: var(--theme-accent-link-color);
+}
+#themeSelector {
+	margin-left: auto;
+}
+#themeSelector::after {
+	content: attr(data-theme) "default";
+	text-transform: capitalize;
 }
 
 a {
@@ -108,7 +115,6 @@ p {
 }
 
 footer {
-	min-height: 5em;
 	padding: 1em;
 	text-align: center;
 }
