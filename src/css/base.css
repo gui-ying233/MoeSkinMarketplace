@@ -17,7 +17,8 @@ header > nav {
 	display: flex;
 	align-items: center;
 }
-header > nav > * {
+header > nav > a,
+header > nav > select {
 	padding: 1em;
 	margin: 0;
 	background-color: var(--theme-card-background-color);
@@ -27,16 +28,19 @@ header > nav > * {
 	user-select: none;
 	transition: all 250ms;
 }
-header > nav > *:hover {
+header > nav > a:hover,
+header > nav > select:hover {
 	background-color: var(--theme-accent-color);
 	color: var(--theme-accent-link-color);
 }
 #themeSelector {
 	margin-left: auto;
 }
-#themeSelector::after {
-	content: attr(data-theme) "default";
-	text-transform: capitalize;
+header > nav > select {
+	margin-right: 1em;
+	padding: 0.5em;
+	border: none;
+	font-size: 1em;
 }
 
 a {
