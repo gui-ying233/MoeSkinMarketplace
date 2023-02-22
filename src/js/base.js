@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.head.appendChild(theme);
 	const header = document.createElement("header");
 	header.innerHTML =
-		'<nav><a href="index.html">首页</a><a href="css.html">CSS</a><a href="css.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
+		'<nav><a href="index.html">首页</a><a href="css.html">CSS</a><a href="js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
 	document.body.prepend(header);
 	const themes = document.createElement("select");
 	themes.name = "theme-select";
