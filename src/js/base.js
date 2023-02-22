@@ -16,7 +16,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const theme = document.createElement("style");
 	theme.id = "theme";
-	fetch("src/css/theme/default.css").then((response) => {
+	let themeCookie = document.cookie.replace(
+		/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/,
+		"$1"
+	);
+	fetch(`src/css/theme/${themeCookie || "default"}.css`).then((response) => {
 		response.text().then((data) => {
 			theme.innerHTML = data;
 		});
@@ -38,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				let theme = document.createElement("option");
 				theme.value = f.name.slice(0, -4);
 				theme.text = f.name.slice(0, -4);
+				if (theme.value === themeCookie) {
+					theme.selected = true;
+				}
 				themes.appendChild(theme);
 			}
 		})
@@ -52,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 			}
 		);
+		document.cookie = "theme=" + event.target.value;
 	});
 	document.body.getElementsByTagName("nav")[0].appendChild(themes);
 
@@ -93,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				"<code class='language-" +
 				pres[0].getAttribute("lang") +
 				"'>" +
-				s;
-			pres[i].innerHTML + "</code>";
+				pres[i].innerHTML +
+				"</code>";
 		}
 		const preScript = document.createElement("script");
 		preScript.type = "text/javascript";
