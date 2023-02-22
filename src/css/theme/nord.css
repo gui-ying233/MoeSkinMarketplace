@@ -1,3 +1,5 @@
+@import url("//unpkg.com/nord-highlightjs@0.1.0/dist/nord.css");
+
 :root {
 	--theme-accent-color--rgb: 129, 161, 193 !important;
 	--theme-secondary-color--rgb: 136, 192, 208 !important;

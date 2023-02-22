@@ -60,6 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		);
 		document.cookie = "theme=" + event.target.value;
+		setTimeout(() => {
+			for (
+				let i = 0;
+				i < [...document.body.querySelectorAll("pre")].length;
+				i++
+			) {
+				document.body.querySelectorAll("pre")[i].style.color =
+					document.defaultView.getComputedStyle(
+						document.body.querySelectorAll("pre > code.hljs")[i]
+					).color;
+			}
+		}, 100);
 	});
 	document.body.getElementsByTagName("nav")[0].appendChild(themes);
 
@@ -106,8 +118,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		const preScript = document.createElement("script");
 		preScript.type = "text/javascript";
-		preScript.addEventListener("load", (event) => {
+		preScript.addEventListener("load", () => {
 			hljs.highlightAll();
+			window.onload = () => {
+				for (
+					let i = 0;
+					i < [...document.body.querySelectorAll("pre")].length;
+					i++
+				) {
+					document.body.querySelectorAll("pre")[i].style.color =
+						document.defaultView.getComputedStyle(
+							document.body.querySelectorAll("pre > code.hljs")[i]
+						).color;
+				}
+			};
 		});
 		preScript.src =
 			"//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js";

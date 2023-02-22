@@ -1,3 +1,5 @@
+@import url("//unpkg.com/@catppuccin/highlightjs/css/catppuccin-latte.css");
+
 /* Based on Latte flavor in Catppuccin */
 ._addText {
 	content: "{{User:GuoPC/MoeLatte}}<p>具体使用方法请参阅[[User:鬼影233/MoeSkinPlus#主题包]]。</p>";

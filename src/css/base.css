@@ -1,5 +1,4 @@
 @import url("//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css");
-@import url("//unpkg.com/nord-highlightjs@0.1.0/dist/nord.css");
 
 body {
 	margin: 0;
@@ -90,7 +89,6 @@ pre > code {
 }
 pre::before {
 	content: attr(lang);
-	color: #d8dee9;
 	position: absolute;
 	right: 0.5em;
 	top: 0.25em;
