@@ -42,6 +42,10 @@ header > nav > select {
 	font-size: 1em;
 	text-transform: capitalize;
 }
+header > nav > select > option {
+	background-color: var(--theme-card-background-color);
+	color: var(--theme-text-color);
+}
 
 a {
 	color: var(--theme-link-color);
