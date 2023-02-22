@@ -7,8 +7,18 @@
 // 			if (file.type === "dir") {
 // 				console.log(file.name);
 // 			}
-// 			xq;
 // 		});
+// 	})
+// 	.catch((error) => {
+// 		console.error(error);
+// 	});
+//
+// fetch("https://api.github.com/repos/gui-ying233/MoeSkinMarketplace/contents/src/css/theme")
+// 	.then((response) => response.json())
+// 	.then((data) => {
+// 		for (f of data) {
+// 			console.log(f.name.slice(0, -4))
+// 		}
 // 	})
 // 	.catch((error) => {
 // 		console.error(error);
