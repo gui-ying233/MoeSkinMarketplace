@@ -34,6 +34,8 @@ header > nav > select:hover {
 }
 #themeSelector {
 	margin-left: auto;
+	-webkit-user-select: none;
+	user-select: none;
 }
 header > nav > select {
 	margin-right: 1em;
