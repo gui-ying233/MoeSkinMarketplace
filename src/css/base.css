@@ -1,5 +1,9 @@
 @import url("//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css");
 
+* {
+	transition: all 250ms;
+}
+
 body {
 	margin: 0;
 	background-color: var(--theme-background-color);
@@ -25,7 +29,6 @@ header > nav > select {
 	border-radius: 3px;
 	-webkit-user-select: none;
 	user-select: none;
-	transition: all 250ms;
 }
 header > nav > a:hover,
 header > nav > select:hover {
@@ -116,7 +119,6 @@ article {
 	margin: 0 auto;
 	padding: 0 2.5em;
 	max-width: 45em;
-	min-height: calc(100vh - 17.75em);
 }
 
 p {

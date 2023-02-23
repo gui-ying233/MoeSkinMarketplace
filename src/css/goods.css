@@ -1,0 +1,18 @@
+#goods {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+	max-width: 50em;
+}
+#goods > .good {
+	margin: 1em;
+	padding: 1em;
+	border-radius: 3px;
+	background-color: var(--theme-card-background-color);
+	box-shadow: var(--theme-card-box-shadow);
+	color: var(--theme-text-color);
+}
+#goods > .good:hover {
+	box-shadow: var(--theme-card-box-shadow--hover);
+}
