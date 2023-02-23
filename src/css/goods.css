@@ -5,14 +5,32 @@
 	margin: auto;
 	max-width: 50em;
 }
+#goods:empty::after {
+	content: "还没有东西喵~";
+}
 #goods > .good {
+	flex: 1 1 5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin: 1em;
-	padding: 1em;
-	border-radius: 3px;
+	padding: 0;
+	border-radius: 0.5rem;
+	max-width: 15em;
 	background-color: var(--theme-card-background-color);
 	box-shadow: var(--theme-card-box-shadow);
 	color: var(--theme-text-color);
 }
 #goods > .good:hover {
 	box-shadow: var(--theme-card-box-shadow--hover);
+}
+#goods > .good > img {
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+#goods > .good > p {
+	text-indent: 0;
+	margin: 0;
+	padding-inline: 0.5em;
+	text-align: center;
+	vertical-align: middle;
 }

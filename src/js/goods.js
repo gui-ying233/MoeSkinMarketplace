@@ -4,7 +4,17 @@ fetch(
 	"https://api.github.com/repos/gui-ying233/MoeSkinMarketplace/contents/goods/" +
 		window.location.pathname.slice(1, -5)
 )
-	.then((response) => response.json())
+	.then((response) => {
+		if (response.status !== 200) {
+			document.getElementById(
+				"goods"
+			).innerHTML = `<p style="text-indent:0;">${
+				response.status + response.statusText
+			}</p>`;
+		} else {
+			return response.json();
+		}
+	})
 	.then((data) => {
 		data.forEach((file) => {
 			if (file.type === "dir") {
@@ -16,7 +26,19 @@ fetch(
 					"/" +
 					file.name +
 					"/main.html";
-				good.innerText = file.name;
+				fetch(
+					`goods/${window.location.pathname.slice(1, -5)}/${
+						file.name
+					}/banner.png`
+				).then((response) => {
+					if (response.ok) {
+						good.innerHTML += `<img src="goods/${window.location.pathname.slice(
+							1,
+							-5
+						)}/${file.name}/banner.png" alt="${file.name}">`;
+					}
+					good.innerHTML += `<p>${file.name}</p>`;
+				});
 				document.getElementById("goods").appendChild(good);
 			}
 		});
