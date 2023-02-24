@@ -2,7 +2,7 @@
 
 fetch(
 	"https://api.github.com/repos/gui-ying233/MoeSkinMarketplace/contents/goods/" +
-		window.location.pathname.slice(1, -5)
+		document.URL.replace(/.+\/(css|js).html/, "$1")
 )
 	.then((response) => {
 		if (response.status !== 200) {
@@ -22,12 +22,12 @@ fetch(
 				good.classList.add("good");
 				good.href =
 					"../goods/" +
-					window.location.pathname.slice(1, -5) +
+					document.URL.replace(/.+\/(css|js).html/, "$1") +
 					"/" +
 					file.name +
 					"/main.html";
 				fetch(
-					`../goods/${window.location.pathname.slice(1, -5)}/${
+					`../goods/${document.URL.replace(/.+\/(css|js).html/, "$1")}/${
 						file.name
 					}/banner.png`
 				).then((response) => {
