@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			console.error(error);
 		});
 	themes.addEventListener("change", (event) => {
-		fetch("/src/css/theme/" + event.target.value + ".css").then(
+		fetch("./src/css/theme/" + event.target.value + ".css").then(
 			(response) => {
 				response.text().then((data) => {
 					document.getElementById("theme").innerHTML = data;
