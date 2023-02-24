@@ -7,6 +7,29 @@
 		<title>MoeSkinPlus - MoeSkin Marketplace</title>
 		<link rel="stylesheet" href="../../../src/css/base.css" />
 		<script src="../../../src/js/base.js"></script>
+		<style>
+			picture {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+				align-content: center;
+			}
+			picture > img {
+				flex: 15em;
+				max-width: 100%;
+				margin: 5%;
+				border-radius: 0.5rem;
+				color: var(--theme-text-color);
+			}
+			picture > img.card {
+				background-color: var(--theme-card-background-color);
+				box-shadow: var(--theme-card-box-shadow);
+			}
+			picture > img:hover {
+				transform: scale(1.1);
+			}
+		</style>
 	</head>
 	<body>
 		<main>
@@ -79,8 +102,8 @@
 							target="_blank"
 							class="ns"
 							>胡话</a
-						>&#125;&#125;
-						的划线、文字颜色的调整，用户可以更方便对M+的一些颜色进行调整；
+						>&#125;&#125; 的划线、文字颜色的调整，用户可以更方便对
+						M+ 的一些颜色进行调整；
 					</li>
 					<li>
 						没什么用的<code>moeskinplusonly</code>与<code>nomoskinplus</code>类，效果与<code>mobileonly</code>、<code>nomoblie</code>类似，但
@@ -99,15 +122,26 @@
 						>内均可以引用，不会影响到其他皮肤。
 					</li>
 				</ul>
-				<!--
-                <h2>视觉图</h2>
-				概念视觉图
-                主视觉图-展开侧边栏
-                主视觉图-折叠侧边栏
-                Wikiplus按钮
-                info圆角
-                分类栏
-                -->
+
+				<h2>视觉图</h2>
+				<!-- 概念视觉图 -->
+				<picture>
+					<img
+						src="./assets/主视觉图-展开侧边栏.png"
+						alt="主视觉图-展开侧边栏" />
+					<img
+						src="./assets/主视觉图-折叠侧边栏.png"
+						alt="主视觉图-折叠侧边栏" />
+					<img
+						src="./assets/Wikiplus 按钮.png"
+						alt="Wikiplus 按钮"
+						class="card" />
+					<img
+						src="./assets/{{info}} 与 {{黑幕}} 圆角.png"
+						alt="{{info}} 与 {{黑幕}} 圆角"
+						class="card" />
+					<img src="./assets/分类栏.png" alt="分类栏" class="card" />
+				</picture>
 				<h2>使用方法</h2>
 				<p>
 					具体方法查看首页，引用代码：<code

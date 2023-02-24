@@ -29,13 +29,13 @@ fetch(
 					`../goods/${document.URL.replace(
 						/.+\/(css|js).html/,
 						"$1"
-					)}/${file.name}/banner.png`
+					)}/${file.name}/assets/banner.png`
 				).then((response) => {
 					if (response.ok) {
 						good.innerHTML += `<img src="../goods/${document.URL.replace(
 							/.+\/(css|js).html/,
 							"$1"
-						)}/${file.name}/banner.png" alt="${file.name}">`;
+						)}/${file.name}/assets/banner.png" alt="${file.name}">`;
 					}
 					good.innerHTML += `<p translate="no">${file.name}</p>`;
 				});
