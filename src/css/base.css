@@ -55,15 +55,17 @@ header > nav > select > option {
 a {
 	color: var(--theme-link-color);
 	text-decoration: none;
-	padding-inline: 0.125em;
-	margin-inline: 0.125em;
+}
+a::before,
+a::after {
+	content: " ";
 }
 a.tl::before {
-	content: "{{";
+	content: " {{";
 	color: var(--theme-text-color);
 }
 a.tl::after {
-	content: "}}";
+	content: "}} ";
 	color: var(--theme-text-color);
 }
 a:empty::after {
@@ -94,8 +96,7 @@ h6 > a {
 }
 
 code {
-	margin-inline: 0.125em;
-	padding: 0.125em;
+	padding-inline: 0.125em;
 	border-radius: 0.125em;
 	background-color: var(--theme-card-background-color);
 	border: 1px solid var(--theme-border-color);
