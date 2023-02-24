@@ -10,7 +10,7 @@ fetch(
 		if (response.status !== 200) {
 			document.getElementById(
 				"goods"
-			).innerHTML = `<p style="text-indent:0;">${toString(
+			).innerHTML = `<p style="text-indent:0;">${String(
 				response.status + response.statusText
 			)}</p>`;
 		}
