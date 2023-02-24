@@ -61,13 +61,9 @@ a::before,
 a::after {
 	content: " ";
 }
-a.tl::before {
-	content: " {{";
-	color: var(--theme-text-color);
-}
-a.tl::after {
-	content: "}} ";
-	color: var(--theme-text-color);
+a.ns::before,
+a.ns::after {
+	content: revert;
 }
 a:empty::after {
 	content: attr(href);
