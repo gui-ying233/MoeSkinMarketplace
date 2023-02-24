@@ -37,7 +37,7 @@ fetch(
 							"$1"
 						)}/${file.name}/banner.png" alt="${file.name}">`;
 					}
-					good.innerHTML += `<p>${file.name}</p>`;
+					good.innerHTML += `<p translate="no">${file.name}</p>`;
 				});
 				document.getElementById("goods").appendChild(good);
 			}
