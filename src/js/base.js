@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/,
 		"$1"
 	);
-	fetch(`https://gui-ying233.github.io/MoeSkinMarketplace/src/css/theme/${themeCookie || "default"}.css`).then(
+	fetch(`/MoeSkinMarketplace/src/css/theme/${themeCookie || "default"}.css`).then(
 		(response) => {
 			response.text().then((data) => {
 				theme.innerHTML = data;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.head.appendChild(theme);
 	const header = document.createElement("header");
 	header.innerHTML =
-		'<nav><a href="https://gui-ying233.github.io/MoeSkinMarketplace">首页</a><a href="https://gui-ying233.github.io/MoeSkinMarketplace/css.html">CSS</a><a href="https://gui-ying233.github.io/MoeSkinMarketplace/js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
+		'<nav><a href="/MoeSkinMarketplace">首页</a><a href="/MoeSkinMarketplace/css.html">CSS</a><a href="/MoeSkinMarketplace/js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
 	document.body.prepend(header);
 	const themes = document.createElement("select");
 	themes.name = "theme-select";
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			console.error(error);
 		});
 	themes.addEventListener("change", (event) => {
-		fetch(`https://gui-ying233.github.io/MoeSkinMarketplace/src/css/theme/${event.target.value}.css`).then(
+		fetch(`/MoeSkinMarketplace/src/css/theme/${event.target.value}.css`).then(
 			(response) => {
 				response.text().then((data) => {
 					document.getElementById("theme").innerHTML = data;
