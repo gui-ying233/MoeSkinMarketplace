@@ -7,7 +7,7 @@ fetch(
 	)}`
 )
 	.then((response) => {
-		if (response.status !== 200) {
+		if (response.status !== 200 && response.status !== 404) {
 			document.getElementById(
 				"goods"
 			).innerHTML = `<p style="text-indent:0;">${String(
