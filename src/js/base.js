@@ -1,8 +1,8 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-	const theme = document.createElement("style");
-	theme.id = "theme";
+	const themeStyle = document.createElement("style");
+	themeStyle.id = "theme";
 	const themeCookie = document.cookie.replace(
 		/(?:(?:^|.*;\s*)theme\s*=\s*([^;]*).*$)|^.*$/,
 		"$1"
@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	fetch(`/MoeSkinMarketplace/src/css/theme/${themeCookie || "default"}.css`).then(
 		(response) => {
 			response.text().then((data) => {
-				theme.innerHTML = data;
+				themeStyle.innerHTML = data;
 			});
 		}
 	);
-	document.head.appendChild(theme);
+	document.head.appendChild(themeStyle);
 	const header = document.createElement("header");
 	header.innerHTML =
 		'<nav><a href="/MoeSkinMarketplace">首页</a><a href="/MoeSkinMarketplace/css.html">CSS</a><a href="/MoeSkinMarketplace/js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
