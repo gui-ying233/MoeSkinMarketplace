@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				const theme = document.createElement("option");
 				theme.value = f.name.slice(0, -4);
 				theme.text = f.name.slice(0, -4);
-				theme.translate = "no";
+				theme.translate = false;
 				if (theme.value === themeCookie) {
 					theme.selected = true;
 				}
