@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/,
 		"$1"
 	);
-	fetch(`src/css/theme/${themeCookie || "default"}.css`).then((response) => {
+	fetch(`/src/css/theme/${themeCookie || "default"}.css`).then((response) => {
 		response.text().then((data) => {
 			theme.innerHTML = data;
 		});
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.head.appendChild(theme);
 	const header = document.createElement("header");
 	header.innerHTML =
-		'<nav><a href="index.html">首页</a><a href="css.html">CSS</a><a href="js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
+		'<nav><a href="/index.html">首页</a><a href="/css.html">CSS</a><a href="/js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
 	document.body.prepend(header);
 	const themes = document.createElement("select");
 	themes.name = "theme-select";
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			console.error(error);
 		});
 	themes.addEventListener("change", (event) => {
-		fetch("src/css/theme/" + event.target.value + ".css").then(
+		fetch("/src/css/theme/" + event.target.value + ".css").then(
 			(response) => {
 				response.text().then((data) => {
 					document.getElementById("theme").innerHTML = data;
