@@ -21,7 +21,7 @@ fetch(
 			if (file.type === "dir") {
 				const good = document.createElement("a");
 				good.classList.add("good");
-				good.href = `../goods/${document.URL.replace(
+				good.href = `./goods/${document.URL.replace(
 					/.+\/(css|js).html/,
 					"$1"
 				)}/${file.name}/main.html`;
