@@ -8,9 +8,9 @@ fetch(
 		if (response.status !== 200) {
 			document.getElementById(
 				"goods"
-			).innerHTML = `<p style="text-indent:0;">${
+			).innerHTML = `<p style="text-indent:0;">${toString(
 				response.status + response.statusText
-			}</p>`;
+			)}</p>`;
 		} else {
 			return response.json();
 		}
