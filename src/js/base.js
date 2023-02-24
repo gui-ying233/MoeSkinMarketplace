@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const theme = document.createElement("style");
 	theme.id = "theme";
-	let themeCookie = document.cookie.replace(
-		/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/,
+	const themeCookie = document.cookie.replace(
+		/(?:(?:^|.*;\s*)theme\s*=\s*([^;]*).*$)|^.*$/,
 		"$1"
 	);
 	fetch(`/MoeSkinMarketplace/src/css/theme/${themeCookie || "default"}.css`).then(
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		.then((response) => response.json())
 		.then((data) => {
 			for (const f of data) {
-				let theme = document.createElement("option");
+				const theme = document.createElement("option");
 				theme.value = f.name.slice(0, -4);
 				theme.text = f.name.slice(0, -4);
 				if (theme.value === themeCookie) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 			}
 		);
-		document.cookie = "theme=" + event.target.value;
+		document.cookie = `theme=${event.target.value}`;
 		setTimeout(() => {
 			for (
 				let i = 0;
