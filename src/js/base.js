@@ -7,15 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/,
 		"$1"
 	);
-	fetch(`/src/css/theme/${themeCookie || "default"}.css`).then((response) => {
-		response.text().then((data) => {
-			theme.innerHTML = data;
-		});
-	});
+	fetch(`./src/css/theme/${themeCookie || "default"}.css`).then(
+		(response) => {
+			response.text().then((data) => {
+				theme.innerHTML = data;
+			});
+		}
+	);
 	document.head.appendChild(theme);
 	const header = document.createElement("header");
 	header.innerHTML =
-		'<nav><a href="/index.html">首页</a><a href="/css.html">CSS</a><a href="/js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
+		'<nav><a href="./index.html">首页</a><a href="./css.html">CSS</a><a href="./js.html">JS</a><label id="themeSelector" for="theme-select">主题：</label></nav>';
 	document.body.prepend(header);
 	const themes = document.createElement("select");
 	themes.name = "theme-select";

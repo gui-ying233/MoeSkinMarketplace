@@ -21,18 +21,18 @@ fetch(
 				const good = document.createElement("a");
 				good.classList.add("good");
 				good.href =
-					"goods/" +
+					"../goods/" +
 					window.location.pathname.slice(1, -5) +
 					"/" +
 					file.name +
 					"/main.html";
 				fetch(
-					`goods/${window.location.pathname.slice(1, -5)}/${
+					`../goods/${window.location.pathname.slice(1, -5)}/${
 						file.name
 					}/banner.png`
 				).then((response) => {
 					if (response.ok) {
-						good.innerHTML += `<img src="goods/${window.location.pathname.slice(
+						good.innerHTML += `<img src="../goods/${window.location.pathname.slice(
 							1,
 							-5
 						)}/${file.name}/banner.png" alt="${file.name}">`;
