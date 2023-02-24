@@ -21,6 +21,7 @@
 	--theme-card-box-shadow: 0 0 0.5rem rgba(140, 143, 161, 0.1) !important;
 	--theme-card-box-shadow--hover: 0 0 0.85rem rgba(140, 143, 161, 0.2) !important;
 	--theme-header-background-color: rgb(230, 233, 239) !important;
+	--theme-header-box-shadow-color: rgb(220, 224, 232) !important;
 	--theme-footer-top-color: rgb(220, 224, 232) !important;
 	--theme-footer-bottom-color: #CCD0DA !important;
 	--theme-danger-color: rgb(230, 69, 83) !important;
