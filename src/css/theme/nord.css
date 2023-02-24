@@ -1,34 +1,31 @@
 @import url("//unpkg.com/nord-highlightjs@0.1.0/dist/nord.css");
 
 :root {
-	--theme-accent-color--rgb: 129, 161, 193 !important;
-	--theme-secondary-color--rgb: 136, 192, 208 !important;
-	--theme-text-color--rgb: 76, 86, 106 !important;
-	--theme-link-color: rgb(64, 117, 181) !important;
-	--theme-accent-link-color: rgb(236, 239, 244) !important;
-	--theme-background-color: rgb(229, 233, 240) !important;
-	--theme-border-color: rgb(216, 222, 233) !important;
-	--theme-text-shadow-color: rgb(46, 52, 64) !important;
-	--theme-button-color: rgb(94, 129, 172) !important;
-	--theme-button-color--hover: #88C0D0 !important;
-	--theme-button-color--active: #81A1C1 !important;
-	--theme-card-background-color--rgb: 236, 239, 244 !important;
-	--theme-card-box-shadow: 0 0 .5rem rgba(46, 52, 64, .1) !important;
-	--theme-card-box-shadow--hover: 0 0 .85rem rgba(46, 52, 64, .2) !important;
-	--theme-header-background-color: rgb(255, 255, 255) !important;
-	--theme-footer-top-color: rgb(229, 233, 240) !important;
-	--theme-footer-bottom-color: #D8DEE9 !important;
-	--theme-danger-color: rgb(191, 97, 106) !important;
-	--theme-input-background-color: rgb(245, 245, 245) !important;
-	--theme-input-border-color: rgb(229, 233, 240) !important;
-	--theme-input-border-color--hover: #D8DEE9 !important;
+	--theme-accent-color--rgb: 129, 161, 193;
+	--theme-secondary-color--rgb: 136, 192, 208;
+	--theme-text-color--rgb: 76, 86, 106;
+	--theme-link-color: rgb(64, 117, 181);
+	--theme-accent-link-color: rgb(236, 239, 244);
+	--theme-background-color: rgb(229, 233, 240);
+	--theme-border-color: rgb(216, 222, 233);
+	--theme-text-shadow-color: rgb(46, 52, 64);
+	--theme-button-color: rgb(94, 129, 172);
+	--theme-button-color--hover: #88c0d0;
+	--theme-button-color--active: #81a1c1;
+	--theme-card-background-color--rgb: 236, 239, 244;
+	--theme-card-box-shadow: 0 0 0.5rem rgba(46, 52, 64, 0.1);
+	--theme-card-box-shadow--hover: 0 0 0.85rem rgba(46, 52, 64, 0.2);
+	--theme-header-background-color: rgb(255, 255, 255);
+	--theme-header-box-shadow-color: rgb(216, 222, 233);
+	--theme-footer-top-color: rgb(229, 233, 240);
+	--theme-footer-bottom-color: #d8dee9;
+	--theme-danger-color: rgb(191, 97, 106);
+	--theme-input-background-color: rgb(245, 245, 245);
+	--theme-input-border-color: rgb(229, 233, 240);
+	--theme-input-border-color--hover: #d8dee9;
 	--theme-just-kidding-text-color: hsl(220deg 16% 50%);
-}
- 
-/* 非MoeSkinPlus补充包 */
-:root {
-	--theme-accent-color: rgb(var(--theme-accent-color--rgb)) !important;
-	--theme-secondary-color: rgb(var(--theme-secondary-color--rgb)) !important;
-	--theme-text-color: rgb(var(--theme-text-color--rgb)) !important;
-	--theme-card-background-color: rgb(var(--theme-card-background-color--rgb)) !important;
+	--theme-accent-color: rgb(var(--theme-accent-color--rgb));
+	--theme-secondary-color: rgb(var(--theme-secondary-color--rgb));
+	--theme-text-color: rgb(var(--theme-text-color--rgb));
+	--theme-card-background-color: rgb(var(--theme-card-background-color--rgb));
 }
