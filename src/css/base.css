@@ -26,7 +26,7 @@ header > nav > select {
 	margin: 0;
 	background-color: var(--theme-card-background-color);
 	color: var(--theme-text-color);
-	border-radius: 3px;
+	border-radius: 0 0 3px 3px;
 	-webkit-user-select: none;
 	user-select: none;
 }
@@ -44,6 +44,7 @@ header > nav > select {
 	margin-right: 1em;
 	padding: 0.5em;
 	border: none;
+	border-radius: 3px;
 	font-size: 1em;
 	text-transform: capitalize;
 }

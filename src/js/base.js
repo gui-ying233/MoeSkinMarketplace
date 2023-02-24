@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		/(?:(?:^|.*;\s*)theme\s*=\s*([^;]*).*$)|^.*$/,
 		"$1"
 	);
-	fetch(`/MoeSkinMarketplace/src/css/theme/${themeCookie || "default"}.css`).then(
-		(response) => {
-			response.text().then((data) => {
-				themeStyle.innerHTML = data;
-			});
-		}
-	);
+	fetch(
+		`/MoeSkinMarketplace/src/css/theme/${themeCookie || "default"}.css`
+	).then((response) => {
+		response.text().then((data) => {
+			themeStyle.innerHTML = data;
+		});
+	});
 	document.head.appendChild(themeStyle);
 	const header = document.createElement("header");
 	header.innerHTML =
@@ -41,13 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			console.error(error);
 		});
 	themes.addEventListener("change", (event) => {
-		fetch(`/MoeSkinMarketplace/src/css/theme/${event.target.value}.css`).then(
-			(response) => {
-				response.text().then((data) => {
-					document.getElementById("theme").innerHTML = data;
-				});
-			}
-		);
+		fetch(
+			`/MoeSkinMarketplace/src/css/theme/${event.target.value}.css`
+		).then((response) => {
+			response.text().then((data) => {
+				document.getElementById("theme").innerHTML = data;
+			});
+		});
 		document.cookie = `theme=${event.target.value}`;
 		setTimeout(() => {
 			for (
