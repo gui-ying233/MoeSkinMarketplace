@@ -26,13 +26,13 @@ fetch(
 					"$1"
 				)}/${file.name}/main.html`;
 				fetch(
-					`../goods/${document.URL.replace(
+					`./goods/${document.URL.replace(
 						/.+\/(css|js).html/,
 						"$1"
 					)}/${file.name}/assets/banner.png`
 				).then((response) => {
 					if (response.ok) {
-						good.innerHTML += `<img src="../goods/${document.URL.replace(
+						good.innerHTML += `<img src="./goods/${document.URL.replace(
 							/.+\/(css|js).html/,
 							"$1"
 						)}/${file.name}/assets/banner.png" alt="${file.name}">`;
